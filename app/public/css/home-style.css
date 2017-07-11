@@ -1,0 +1,126 @@
+body {
+    font: 300 1.5em 'Zilla Slab', serif;
+    position: relative;
+}
+
+.container {
+    width: 75%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.survey-Btn {
+    border: 3px solid #00bfa3;
+    border-radius: 6px;
+    padding: 10px 15px;
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    font: 500 .8em 'Zilla Slab', serif;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.survey-Btn span {
+    color: #00bfa3;
+    display: inline-block;
+    -webkit-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.icon {
+    position: absolute;
+    right: -800px;
+    top: 0;
+    color: #00bfa3;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 10;
+    -webkit-transition: all 1.00s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 1.00s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 1.00s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.survey-Btn:hover {
+    background-color: #00bfa3;
+}
+
+.survey-Btn:active {
+    background-color: #00a090;
+}
+
+.survey-Btn:hover span {
+    color: #fff;
+    margin-right: 40px;
+}
+
+.survey-Btn:hover .icon {
+    right: 0;
+}
+
+.icon:hover {
+    color: #008c7e;
+}
+
+
+/*.survey-Btn {
+    padding: 15px;
+    font-size: 1.5em;
+    border: 3px solid #00bfa3;
+    border-radius: 6px;
+    background: #fff;
+    color: #00bfa3;
+    overflow: hidden;
+    -webkit-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+
+}
+.survey-Btn:active {
+    border-color: #008c7e;
+    color: #00a090;
+}
+.survey-Btn:focus {
+    outline: none;
+}
+.survey-Btn:hover {
+    background: #00bfa3;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+span:hover {
+    /*	position: absolute;*/
+
+-webkit-transform: translateX(100px);
+-ms-transform: translateX(100px);
+transform: translateX(100px);
+
+}
+*/
+/*.survey-Btn:before {
+	left: -100%;
+	top: 0;
+}
+
+.survey-Btn:hover:before {
+	left: 0;
+}
+*/
