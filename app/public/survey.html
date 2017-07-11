@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrendFndr Survey</title>
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,500" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/survey-style.css">
+</head>
+
+<body>
+<section class="container">
+    <form class="inputWrapper">
+        <div class="form-row col-6">
+            <input id="firstName" type="text" name="" class="form" placeholder="First Name" required="">
+        </div>
+        <div class="form-row col-6">
+            <input id="lastName" type="text" name="" class="form" placeholder="Last Name" required="">
+        </div>
+        <div class="form-row col-12">
+            <input id="photo" type="" name="" placeholder="Enter link to your photo" required="">
+        </div>
+    </form>
+    <form class="surveyWrapper">
+    	<select class="question" placeholder="our firt selection" required="">
+    		<option value\"disabled selected hidden">Choose a category...</option>
+    		<option value="Strongly agree">Strongly agree</option>
+    		<option value="Agree">Agree</option>
+    		<option value="Neutal">Neutral</option>
+    		<option value="Slightly disagree">Slightly disagree</option>
+    		<option value="Strongly disagree">Strongly disagree</option>
+    	</select>
+    </form>
+    </section>
+</body>
+
+</html>

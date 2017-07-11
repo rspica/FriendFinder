@@ -5,25 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrendFndr</title>
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./css/reset.css">
     <link rel="stylesheet" type="text/css" href="./css/home-style.css">
 </head>
 
 <body>
-    <section class="container">
+    <a href="/APIlist">API Friend List |</a>
+    <a href="https://github.com/rspica/FriendFinder/blob/master/README.md"> GitHub Repo</a>
+    <section id="container">
         <div class=head>
-            <img src="../../images/FF-logo1.svg" alt="Friend finder logo" style="width: 200px">
-            <h1 class="intro">Welcome to frendFndr, This site is developed to point you to like minded people. We use the patented RBC-algorithm to help you connect with someone highly compatible, who shares simiar values.</h1>
+            <img src="../../images/FF-logo2.svg" alt="Friend finder logo" style="width: 200px">
+            <h1 class="intro">FrendFndr...</h1>
+            <p>Like a radar detector that points you to like minded people. Get connected to someone highly compatible, who shares similar tastes and values. FrendFndr is how you meet people.</p>
         </div>
-            <button class="survey-Btn Btn" role="button">
-                <span>Take the survey</span>
-                <div class="icon">&#10140;</div>
-            </button>
+        <div id="btn-wrapper">
+            <a href="/survey">
+                <button class="survey-Btn" role="button">
+                    <div class="flash"></div>
+                    <span>Take the survey</span>
+                    <div class="icon">&#10140;</div>
+                </button>
+            </a>
+        </div>
     </section>
+
+    <script>
+    $(document).ready(function() {
+        const container = $("#container");
+
+        $("#btn-wrapper").on("click", ".survey-Btn", function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            container.css("left", "-50%");
+        });
+    });
+    </script>
 </body>
 
 </html>

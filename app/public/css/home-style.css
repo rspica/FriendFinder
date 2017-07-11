@@ -1,31 +1,47 @@
 body {
-    font: 300 1.5em 'Zilla Slab', serif;
+    font: 300 1.25em 'Zilla Slab', serif;
     position: relative;
 }
 
-.container {
+#container {
     width: 75%;
     max-width: 800px;
-    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translatex(-50%);
+    -webkit-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
 img {
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .intro {
+    border-top: 1px solid #00bfa3;
+    padding-top: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+}
+
+#btn-wrapper {
+    overflow: hidden;
+    position: relative;
 }
 
 .survey-Btn {
+	box-sizing: border-box;
     border: 3px solid #00bfa3;
     border-radius: 6px;
     padding: 10px 15px;
     display: block;
-    margin: 10px;
+    margin: 50px 5px;
     cursor: pointer;
     outline: none;
     font: 500 .8em 'Zilla Slab', serif;
@@ -37,16 +53,16 @@ img {
 .survey-Btn span {
     color: #00bfa3;
     display: inline-block;
-    -webkit-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    -moz-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -webkit-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
 .icon {
     position: absolute;
     right: -800px;
     top: 0;
-    color: #00bfa3;
+    color: #0D37D7;
     background-color: #fff;
     padding: 10px;
     z-index: 10;
@@ -57,10 +73,6 @@ img {
 
 .survey-Btn:hover {
     background-color: #00bfa3;
-}
-
-.survey-Btn:active {
-    background-color: #00a090;
 }
 
 .survey-Btn:hover span {
@@ -76,51 +88,57 @@ img {
     color: #008c7e;
 }
 
-
-/*.survey-Btn {
-    padding: 15px;
-    font-size: 1.5em;
-    border: 3px solid #00bfa3;
-    border-radius: 6px;
-    background: #fff;
-    color: #00bfa3;
-    overflow: hidden;
-    -webkit-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    -moz-transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all 0.45s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-}
-
-
-}
 .survey-Btn:active {
-    border-color: #008c7e;
-    color: #00a090;
-}
-.survey-Btn:focus {
-    outline: none;
-}
-.survey-Btn:hover {
-    background: #00bfa3;
-    color: #fff;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-}
-span:hover {
-    /*	position: absolute;*/
-
--webkit-transform: translateX(100px);
--ms-transform: translateX(100px);
-transform: translateX(100px);
-
-}
-*/
-/*.survey-Btn:before {
-	left: -100%;
-	top: 0;
+    background-color: #0D37D7;
+    /* For browsers that do not support gradients */
+    border-color: #00bfa3;
+    background: -webkit-linear-gradient(left top, #00bfa3, #00bfa3 35%, #0D37D7);
+    background: -o-linear-gradient(bottom right, #00bfa3, #00bfa3 35%, #0D37D7);
+    background: -moz-linear-gradient(bottom right, #00bfa3, #00bfa3 35%, #0D37D7);
+    background: linear-gradient(165deg, #00bfa3, #00bfa3 35%, #0D37D7);
 }
 
-.survey-Btn:hover:before {
+ /*alt animation for arrow -- drop-down shade effect on hover state*/
+/*.icon {
+	position: absolute;
 	left: 0;
+	top: -70px;
+	color: #fff;
+	background-color: #00bfa3;
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+	z-index: 10;
+    -webkit-transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);	
 }
-*/
+
+.survey-Btn:hover .icon {
+	top: 0;
+}*/
+
+
+/* extra animation adds glisten on active state of button
+
+.survey-Btn .flash {
+  background-color: #EC008C;
+  width: 20%;
+  height: 20px;
+  position: absolute;
+  top: 50px;
+  left: -130px;
+  z-index: 90;
+  overflow: hidden;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.survey-Btn:active .flash {
+  left: 130px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  
+}

@@ -1,0 +1,48 @@
+body {
+    font: 300 1.25em 'Zilla Slab', serif;
+    position: relative;
+}
+input {
+	background-color: transparent;
+	border-style: none;
+}
+
+.container {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+    max-width: 800px;
+    background-color: tomato;
+}
+
+.inputWrapper {
+background-color: blue;
+}
+
+.form-row {
+	box-sizing: border-box;
+    border: 3px solid #00bfa3;
+    border-radius: 6px;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
+    flex: 1
+}
+
+input::placeholder {
+    font-size: 1.5em; 
+    color: rgb(152, 170, 181);
+}
+
+input:focus {
+	outline: none;
+}
+
+
+.surveyWrapper {
+	background-color: yellow;
+	height: 100px;
+	flex: 3;
+}
