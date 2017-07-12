@@ -58,7 +58,7 @@ img {
     transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
-.icon {
+.iconARRW {
     position: absolute;
     right: -800px;
     top: 0;
@@ -80,11 +80,11 @@ img {
     margin-right: 40px;
 }
 
-.survey-Btn:hover .icon {
+.survey-Btn:hover .iconARRW {
     right: 0;
 }
 
-.icon:hover {
+.iconARRW:hover {
     color: #008c7e;
 }
 

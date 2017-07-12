@@ -22,15 +22,15 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // ********************* Routes *********************
 //---------------------------------------------------
 app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname, "public/home.html"));
+	res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
 app.get('/about', function() {
-	res.sendFile(path.join(__dirname, "public" "about.html"));
+	res.sendFile(path.join(__dirname, "../public/about.html"));
 });
 
 app.get('/survey', function(req, res) {
-	res.sendFile(path.join(__dirname, "public" "survey.html"));
+	res.sendFile(path.join(__dirname, "../public/survey.html"));
 });
 
 

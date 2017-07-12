@@ -15,29 +15,45 @@
 </head>
 
 <body>
-<section class="container">
-    <form class="inputWrapper">
-        <div class="form-row col-6">
-            <input id="firstName" type="text" name="" class="form" placeholder="First Name" required="">
+    <section class="container">
+        <div class=head>
+            <img src="../../images/FF-logo2.svg" alt="Friend finder logo" style="width: 100px">
         </div>
-        <div class="form-row col-6">
-            <input id="lastName" type="text" name="" class="form" placeholder="Last Name" required="">
-        </div>
-        <div class="form-row col-12">
-            <input id="photo" type="" name="" placeholder="Enter link to your photo" required="">
-        </div>
-    </form>
-    <form class="surveyWrapper">
-    	<select class="question" placeholder="our firt selection" required="">
-    		<option value\"disabled selected hidden">Choose a category...</option>
-    		<option value="Strongly agree">Strongly agree</option>
-    		<option value="Agree">Agree</option>
-    		<option value="Neutal">Neutral</option>
-    		<option value="Slightly disagree">Slightly disagree</option>
-    		<option value="Strongly disagree">Strongly disagree</option>
-    	</select>
-    </form>
+        <form class="inputWrapper">
+            <section class="rowWrapper">
+                <div class="form-row col-6">
+                    <input id="firstName" type="text" name="" class="form" placeholder="First Name" required="">
+                </div>
+                <div class="form-row col-6">
+                    <input id="lastName" type="text" name="" class="form" placeholder="Last Name" required="">
+                </div>
+            </section>
+            <section class="rowWrapper">
+                <div class="form-row col-12">
+                    <input id="photo" type="" name="" placeholder="Enter link to your photo" required="">
+                </div>
+            </section>
+        </form>
+        <form class="surveyWrapper">
+            <select class="question" placeholder="our firt selection" required="">
+                <option value\ "disabled selected hidden">Choose a category...</option>
+                <option value="Strongly agree">Strongly agree</option>
+                <option value="Agree">Agree</option>
+                <option value="Neutal">Neutral</option>
+                <option value="Slightly disagree">Slightly disagree</option>
+                <option value="Strongly disagree">Strongly disagree</option>
+            </select>
+        </form>
     </section>
+    <div id="btn-wrapper">
+            <a href="/survey">
+                <button class="survey-Btn" role="button">
+                    <div class="flash"></div>
+                    <span>Take the survey</span>
+                    <div class="iconCHK">&#10004;</div>
+                </button>
+            </a>
+        </div>
 </body>
 
 </html>
