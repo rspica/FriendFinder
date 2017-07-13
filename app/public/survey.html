@@ -16,26 +16,25 @@
 </head>
 
 <body>
-
     <main class="container">
-    <button class="backArrow">&#10140;</button>
+        <button class="backArrow back-btn">&#10140;</button>
         <div class=head>
-            <img src="images/FF-logo2.svg" alt="Friend finder logo" style="width: 100px">
+            <img class="back-btn" src="images/FF-logo2.svg" alt="Friend finder logo" style="width: 100px">
         </div>
         <form class="inputWrapper">
             <section class="rowWrapper">
                 <div class="form-row col-6">
-                    <input id="firstName" type="text" name="firstName" class="form" placeholder="First Name" required="">
+                    <input id="firstName" type="text" name="firstName" class="form" placeholder="First Name" required>
                     <label for="firstNmae">first name</label>
                 </div>
                 <div class="form-row col-6">
-                    <input id="lastName" type="text" name="lastName" class="form" placeholder="Last Name" required="">
+                    <input id="lastName" type="text" name="lastName" class="form" placeholder="Last Name" required>
                     <label for="lastName">last name</label>
                 </div>
             </section>
             <section class="rowWrapper">
                 <div class="form-row col-12">
-                    <input id="email-input" type="email" name="email" placeholder="Enter valid email address" required></input> 
+                    <input id="email-input" type="email" name="email" placeholder="Enter valid email address" required></input>
                     <label for="email">email address</label>
                 </div>
             </section>
@@ -46,39 +45,164 @@
                 </div>
             </section>
         </form>
-        <form class="surveyWrapper">
-            <select class="question" placeholder="our firt selection" required="">
-                <option value\ "disabled selected hidden">Choose a category...</option>
-                <option value="Strongly agree">Strongly agree</option>
-                <option value="Agree">Agree</option>
-                <option value="Neutal">Neutral</option>
-                <option value="Slightly disagree">Slightly disagree</option>
-                <option value="Strongly disagree">Strongly disagree</option>
-            </select>
-        </form>  
+        <form>
+            <div class="surveyWrapper">
+                <div class="quest-block col-6">
+                    <h3 class="question"><span class="NumDropCap">1. </span>Your mind is always buzzing with unexplored ideas and plans.</h3>
+                    <select id="quest-1" required>
+                        <option value\ "disabled selected hidden">make a selection below</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+                <div class="quest-block col-6">
+                    <h3 class="question"><span class="NumDropCap">2. </span>Generally speaking, you rely more on your experience than your imagination.</h3>
+                    <select id="quest-2" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+            </div>
+            <div class="surveyWrapper">
+                <div class="quest-block col-6">
+                    <h3 class="question"><span class="NumDropCap">3. </span>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+                    <select id="quest-3" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+                <div class="quest-block col-6">
+                    <h3 class="question"><span class="NumDropCap">4. </span>You rarely get carried away by fantasies and ideas.</h3>
+                    <select id="quest-4" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+            </div>
+            <div class="surveyWrapper">
+                <div class="quest-block col-6">
+                    <h3><span>5. </span>You rarely get carried away by fantasies and ideas.</h3>
+                    <select id="quest-5" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+                <div class="quest-block col-6">
+                    <h3><span>6. </span>It is often difficult for you to relate to other people’s feelings.</h3>
+                    <select id="quest-6" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+            </div>
+            <div class="surveyWrapper">
+                <div class="quest-block col-6">
+                    <h3><span>7. </span>In a discussion, truth should be more important than people’s sensitivities.</h3>
+                    <select id="quest-7" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+                <div class="quest-block col-6">
+                    <h3><span>8. </span>You rarely get carried away by fantasies and ideas.</h3>
+                    <select id="quest-8" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+            </div>
+            <div class="surveyWrapper">
+                <div class="quest-block col-6">
+                    <h3><span>9. </span>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+                    <select id="quest-9" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+                <div class="quest-block col-6">
+                    <h3><span>10. </span>You feel more energetic after spending time with a group of people.</h3>
+                    <select id="quest-10" required>
+                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+            </div>
+        </form>
         <div id="btn-wrapper">
-                <button class="submit-Btn" role="button">
-                    <span>submit survey</span>
-                    <div class="iconCHK">&#10004;</div>
-                </button>
+            <button class="submit-Btn" role="button">
+                <span>submit survey</span>
+                <div class="iconCHK">&#10004;</div>
+                <div class="btn-prompt">send it!</div>
+            </button>
         </div>
-            <section class="foot">
+        <section class="foot">
             <a href="/APIlist">API Friend List</a> |
             <a href="https://github.com/rspica/FriendFinder/blob/master/README.md" target="_blank"> GitHub Repo</a>
         </section>
     </main>
     <script>
-        // basic back button to return to home page
-        $(document).on('click', '.backArrow', function() {
-            window.location = '/';
-        });
-        // gets values from survey form field
-        $(document).on(click, '.questions', function() {
-            $('#firstName').val().trim();
-            $('#lastName').val().trim();
-            $('#email-input').val().trim();
-            $('#photo').val().trim();
-        });
+    // basic back button to return to home page
+    $(document).on('click', '.back-btn', function() {
+        console.log('been clicked');
+        window.location = '/';
+
+    });
+    // gets values from survey form field
+    $(document).on('click', '.submit-Btn', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var newFriend = {
+            firstName: $('#firstName').val().trim(),
+            lastName: $('#lastName').val().trim(),
+            email: $('#email-input').val().trim(),
+            photo: $('#photo').val().trim()
+        };
+
+        $('.iconCHK').css("top", "0");
+
+
+        // alert("first name: " + newFriend.lastName);
+    });
     </script>
 </body>
 

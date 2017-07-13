@@ -114,7 +114,11 @@ img {
     color: #0D37D7;
 }
 
-
+@media screen and (max-width: 840px) {
+     #container {
+        max-width: 90%;
+    }
+}
 
 /* extra animation adds glisten on active state of button
 

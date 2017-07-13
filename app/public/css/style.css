@@ -6,14 +6,10 @@ body {
 }
 
 .foot {
-
+	box-sizing: border-box;
     padding: 10px; 
     text-align: right;  
     background-color: #0D37D7; /* For browsers that do not support gradients */
-/*    background: -webkit-linear-gradient(left top, #00bfa3, #00bfa3 35%, #0D37D7);
-    background: -o-linear-gradient(bottom right, #00bfa3, #00bfa3 35%, #0D37D7);
-    background: -moz-linear-gradient(bottom right, #00bfa3, #00bfa3 35%, #0D37D7);
-    background: linear-gradient(165deg, #00bfa3, #00bfa3 35%, #0D37D7);*/
     background: -webkit-linear-gradient(left top, #0D37D7, #0D37D7 5%, #00bfa3);
     background: -o-linear-gradient(bottom right, #0D37D7, #0D37D7 5%, #00bfa3);
     background: -moz-linear-gradient(bottom right, #0D37D7, #0D37D7 5%, #00bfa3);
@@ -27,4 +23,10 @@ body {
 
 .foot a:hover {
     color: #0D37D7;
+}
+
+@media screen and (max-width: 840px) {
+     .container {
+        max-width: 90%;
+    }
 }
