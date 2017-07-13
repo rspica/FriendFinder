@@ -182,26 +182,57 @@
     <script>
     // basic back button to return to home page
     $(document).on('click', '.back-btn', function() {
-        console.log('been clicked');
         window.location = '/';
 
     });
+
+    //inputValidate() {}
+
     // gets values from survey form field
     $(document).on('click', '.submit-Btn', function(e) {
         e.preventDefault();
         e.stopPropagation();
-
         var newFriend = {
             firstName: $('#firstName').val().trim(),
             lastName: $('#lastName').val().trim(),
             email: $('#email-input').val().trim(),
-            photo: $('#photo').val().trim()
+            photo: $('#photo').val().trim(),
+            question1: $('#quest-1').val().trim(),
+            question2: $('#quest-2').val().trim(),
+            question3: $('#quest-3').val().trim(),
+            question4: $('#quest-4').val().trim(),
+            question5: $('#quest-5').val().trim(),
+            question6: $('#quest-6').val().trim(),
+            question7: $('#quest-7').val().trim(),
+            question8: $('#quest-8').val().trim(),
+            question9: $('#quest-9').val().trim(),
+            question10: $('#quest-10').val().trim()
         };
 
         $('.iconCHK').css("top", "0");
 
+        console.log(newFriend);
+        //validate form enrtry
+        // if form entry === '' then alert user to enter valid entry
+        $.post("../data/friends", newFriend, function(friendData) {
+            if (friendData) {
+            $('#firstName').val('');
+            $('#lastName').val('');
+            $('#email-input').val('');
+            $('#photo').val('');
+            $('#quest-1').val('');
+            $('#quest-2').val('');
+            $('#quest-3').val('');
+            $('#quest-4').val('');
+            $('#quest-5').val('');
+            $('#quest-6').val('');
+            $('#quest-7').val('');
+            $('#quest-8').val('');
+            $('#quest-9').val('');
+            $('#quest-10').val('');
+            }
 
-        // alert("first name: " + newFriend.lastName);
+        });
     });
     </script>
 </body>

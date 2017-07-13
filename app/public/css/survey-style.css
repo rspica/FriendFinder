@@ -11,6 +11,7 @@
     margin-bottom: 20px;
 }
 
+
 /*-- grid controls for survey page-flexBox --*/
 .rowWrapper, .surveyWrapper {
     display: flex;
@@ -45,6 +46,10 @@ h3 {
 }*/
 /*-- input form fields --*/
 
+.rowWrapper:last-child {
+    margin-bottom: 50px;
+}
+
 input {
     box-sizing: border-box;
     background-color: transparent;
@@ -54,12 +59,7 @@ input {
     width: 100%;
     max-width: 800px;
     text-align: left;
-}
-
-input#photo {
-    margin-bottom: 25px;
-    background: tomato;
-}
+}   
 
 label {
     font-size: .7em;
