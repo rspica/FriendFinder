@@ -1,20 +1,8 @@
-body {
-    font: 300 1.25em 'Zilla Slab', serif;
-    position: relative;
-}
-
-input {
-    background-color: transparent;
-    border-style: none;
-    padding: 10px 20px 10px;
-    font: 400 1em 'Zilla Slab', serif;
-    width: 100%;
-    text-align: left;
-}
+/* Friend Finder forms page styles */
 
 .container {
     margin: 30px auto;
-    width: 75%;
+    width: 100%;
     max-width: 800px;
 }
 
@@ -29,36 +17,111 @@ input {
 
 .form-row {
     box-sizing: border-box;
-    border: 3px solid #0D37D7;
-    border-radius: 6px;
+    border: 1px solid #0D37D7;
     margin-bottom: 20px;
 }
 
 .col-6 {
     flex-basis: 48.5%;
+    position: relative; /* for input label position*/
 }
 
 .col-12 {
     flex-basis: 100%;
+    position: relative; /* for input label position*/
+}
+
+input {
+    background-color: transparent;
+    border-style: none;
+    padding: 10px 20px 10px;
+    font: 400 1em 'Zilla Slab', serif;
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-size: .7em;
+    color: #0D37D7;
+    background: #fff;
+    border: 1px solid #0D37D7;
+    border-width: 0 1px 0 1px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    opacity: 1;
+    padding: 0 5px;
+    transition: all 0.35s;
+    transform: translateY(calc(-50% - 1px));
 }
 
 input::placeholder {
     font-size: 1em;
-    color: rgba(152, 170, 181, .3);
+    color: rgba(152, 170, 181, .4);
+}
+
+/* adds input name to top of field test */
+input:placeholder-shown + label {
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 input:focus {
     outline: none;
+    border-color: #fff;
 }
 
 .surveyWrapper {
     background-color: yellow;
     height: 100px;
-    flex: 3;
 }
 
-animation for arrow -- drop-down shade effect on hover state*/
-/*.icon {
+
+/* navigation buttons*/
+
+.backArrow {
+    font-size: 1em;
+    color: #0D37D7;
+    transform: rotate(180deg);
+    border: none;
+    background-color: transparent;
+    float: right;
+}
+
+.backArrow:hover {
+    font-size: 1em;
+    color: #eee;
+}
+
+.backArrow:focus {
+    outline: none;
+}
+
+
+/*animation for submit button arrow -- drop-down shade effect on hover state*/
+
+.submit-Btn {
+    box-sizing: border-box;
+    border: 3px solid #0D37D7;
+    padding: 10px 15px;
+    display: block;
+    margin: 50px 5px;
+    cursor: pointer;
+    font: 500 .8em 'Zilla Slab', serif;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-Btn span {
+    color: #0D37D7;
+    display: inline-block;
+    -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+
+.iconCHK {
     position: absolute;
     left: 0;
     top: -70px;
@@ -70,14 +133,16 @@ animation for arrow -- drop-down shade effect on hover state*/
     z-index: 10;
     -webkit-transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
     -moz-transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4); 
+    transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
-.survey-Btn:hover .icon {
+.submit-Btn:hover .iconCHK {
     top: 0;
-}*/
+}
 
-
+.submit-Btn:focus {
+    outline: none;
+}
 
 @media screen and (max-width: 480px) {
     .rowWrapper {

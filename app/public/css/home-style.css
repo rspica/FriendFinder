@@ -1,18 +1,16 @@
-body {
-    font: 300 1.25em 'Zilla Slab', serif;
-    position: relative;
-}
+/* Friend Finder home page styles */
 
 #container {
-    width: 75%;
+    width: 100%;
     max-width: 800px;
+    text-align: center;
     position: absolute;
     top: 20px;
     left: 50%;
     transform: translatex(-50%);
     -webkit-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
     -moz-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 1.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
 img {
@@ -30,18 +28,16 @@ img {
     margin-bottom: 5px;
 }
 
-#btn-wrapper {
-    overflow: hidden;
+/*#btn-wrapper {
     position: relative;
-}
+}*/
 
 .survey-Btn {
 	box-sizing: border-box;
     border: 3px solid #00bfa3;
-    border-radius: 6px;
     padding: 10px 15px;
     display: block;
-    margin: 50px 5px;
+    margin: 50px 0;
     cursor: pointer;
     outline: none;
     font: 500 .8em 'Zilla Slab', serif;
@@ -53,26 +49,26 @@ img {
 .survey-Btn span {
     color: #00bfa3;
     display: inline-block;
-    -webkit-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    -moz-transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
 .iconARRW {
     position: absolute;
     right: -800px;
     top: 0;
-    color: #0D37D7;
+    color: #00bfa3;
     background-color: #fff;
     padding: 10px;
     z-index: 10;
-    -webkit-transition: all 1.00s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    -moz-transition: all 1.00s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all 1.00s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -webkit-transition: all .5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    -moz-transition: all .5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+    transition: all .5s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
 .survey-Btn:hover {
-    background-color: #00bfa3;
+    background-color: #0D37D7;
 }
 
 .survey-Btn:hover span {
@@ -89,34 +85,35 @@ img {
 }
 
 .survey-Btn:active {
-    background-color: #0D37D7;
-    /* For browsers that do not support gradients */
-    border-color: #00bfa3;
-    background: -webkit-linear-gradient(left top, #00bfa3, #00bfa3 35%, #0D37D7);
+    background-color: #00bfa3;
+}
+
+.foot {
+    width: 100%;
+/*    height: 100vh;*/
+    padding: 10px; 
+    text-align: right;  
+    background-color: #0D37D7; /* For browsers that do not support gradients */
+/*    background: -webkit-linear-gradient(left top, #00bfa3, #00bfa3 35%, #0D37D7);
     background: -o-linear-gradient(bottom right, #00bfa3, #00bfa3 35%, #0D37D7);
     background: -moz-linear-gradient(bottom right, #00bfa3, #00bfa3 35%, #0D37D7);
-    background: linear-gradient(165deg, #00bfa3, #00bfa3 35%, #0D37D7);
+    background: linear-gradient(165deg, #00bfa3, #00bfa3 35%, #0D37D7);*/
+    background: -webkit-linear-gradient(left top, #0D37D7, #0D37D7 5%, #00bfa3);
+    background: -o-linear-gradient(bottom right, #0D37D7, #0D37D7 5%, #00bfa3);
+    background: -moz-linear-gradient(bottom right, #0D37D7, #0D37D7 5%, #00bfa3);
+    background: linear-gradient(165deg, #0D37D7, #0D37D7 5%, #00bfa3);
+
 }
 
- /*alt animation for arrow -- drop-down shade effect on hover state*/
-/*.icon {
-	position: absolute;
-	left: 0;
-	top: -70px;
-	color: #fff;
-	background-color: #00bfa3;
-	width: 100%;
-	height: 50px;
-	padding-top: 10px;
-	z-index: 10;
-    -webkit-transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    -moz-transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-    transition: all .50s cubic-bezier(0.31, -0.105, 0.43, 1.4);	
+.foot a {
+    font-size: .75em;
+    color: #fff;
 }
 
-.survey-Btn:hover .icon {
-	top: 0;
-}*/
+.foot a:hover {
+    color: #0D37D7;
+}
+
 
 
 /* extra animation adds glisten on active state of button

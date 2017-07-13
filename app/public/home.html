@@ -10,20 +10,20 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,500" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./css/home-style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/home-style.css">
+
 </head>
 
 <body>
-    <a href="/APIlist">API Friend List |</a>
-    <a href="https://github.com/rspica/FriendFinder/blob/master/README.md"> GitHub Repo</a>
-    <section id="container">
-        <div class=head>
-            <img src="../../images/FF-logo2.svg" alt="Friend finder logo" style="width: 200px">
+    <main id="container">
+        <section class=head>
+            <img src="images/FF-logo2.svg" alt="Friend finder logo" style="width: 200px">
             <h1 class="intro">FrendFndr...</h1>
-            <p>Like a radar detector that points you to like minded people. Get connected to someone highly compatible, who shares similar tastes and values. FrendFndr is how you meet people.</p>
-        </div>
-        <div id="btn-wrapper">
+            <p>Like a radar detector that points you to someone just like you. Get connected to someone highly compatible, who shares similar tastes and values. Remeber, there's no "i" in frend. FrendFndr it's how you meet people.</p>
+        </section>
+        
             <a href="/survey">
                 <button class="survey-Btn" role="button">
                     <div class="flash"></div>
@@ -31,9 +31,12 @@
                     <div class="iconARRW">&#10140;</div>
                 </button>
             </a>
-        </div>
-    </section>
 
+        <section class="foot">
+            <a href="/APIlist">API Friend List</a> |
+            <a href="https://github.com/rspica/FriendFinder/blob/master/README.md" target="_blank"> GitHub Repo</a>
+        </section>
+    </main>
     <script>
     $(document).ready(function() {
         const container = $("#container");
@@ -42,6 +45,7 @@
             e.preventDefault();
             e.stopPropagation();
             container.css("left", "-50%");
+            window.location='/survey';
         });
     });
     </script>
