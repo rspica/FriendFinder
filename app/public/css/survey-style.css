@@ -172,7 +172,7 @@ select:focus {
     transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
 
-.iconCHK, .btn-prompt {
+.success {
     position: absolute;
     left: 0;
     top: -70px;
@@ -189,13 +189,18 @@ select:focus {
 
 .iconCHK {
     z-index: 9;
+    top: 0;
 }
 
-.submit-Btn:hover .btn-prompt {
+/*.btn-rollover{
+    
+}
+
+.submit-Btn:hover .btn-rollover {
     top: 0;
     z-index: 1;
     background-color: tomato;
-}
+}*/
 
 .submit-Btn:focus {
     outline: none;

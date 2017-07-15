@@ -24,23 +24,23 @@
         <form class="inputWrapper">
             <section class="rowWrapper">
                 <div class="form-row col-6">
-                    <input id="firstName" type="text" name="firstName" class="form" placeholder="First Name" required>
+                    <input id="firstName" class="validate" type="text" name="firstName" class="form" placeholder="First Name" required>
                     <label for="firstNmae">first name</label>
                 </div>
                 <div class="form-row col-6">
-                    <input id="lastName" type="text" name="lastName" class="form" placeholder="Last Name" required>
+                    <input id="lastName" class="validate" type="text" name="lastName" class="form" placeholder="Last Name" required>
                     <label for="lastName">last name</label>
                 </div>
             </section>
             <section class="rowWrapper">
                 <div class="form-row col-12">
-                    <input id="email-input" type="email" name="email" placeholder="Enter valid email address" required></input>
+                    <input id="email-input" class="validate" type="email" name="email" placeholder="Enter valid email address" required></input>
                     <label for="email">email address</label>
                 </div>
             </section>
             <section class="rowWrapper">
                 <div class="form-row col-12">
-                    <input id="photo" type="text" name="photoLink" placeholder="Enter link to your photo" required>
+                    <input id="photo" class="validate" type="text" name="photoLink" placeholder="Enter link to your photo" required>
                     <label for="photo">link to photo</label>
                 </div>
             </section>
@@ -49,8 +49,8 @@
             <div class="surveyWrapper">
                 <div class="quest-block col-6">
                     <h3 class="question"><span class="NumDropCap">1. </span>Your mind is always buzzing with unexplored ideas and plans.</h3>
-                    <select id="quest-1" required>
-                        <option value\ "disabled selected hidden">make a selection below</option>
+                    <select id="quest-1" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -60,8 +60,8 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3 class="question"><span class="NumDropCap">2. </span>Generally speaking, you rely more on your experience than your imagination.</h3>
-                    <select id="quest-2" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-2" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -73,8 +73,8 @@
             <div class="surveyWrapper">
                 <div class="quest-block col-6">
                     <h3 class="question"><span class="NumDropCap">3. </span>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
-                    <select id="quest-3" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-3" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -84,8 +84,8 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3 class="question"><span class="NumDropCap">4. </span>You rarely get carried away by fantasies and ideas.</h3>
-                    <select id="quest-4" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-4" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -97,8 +97,8 @@
             <div class="surveyWrapper">
                 <div class="quest-block col-6">
                     <h3><span>5. </span>You rarely get carried away by fantasies and ideas.</h3>
-                    <select id="quest-5" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-5" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -108,8 +108,8 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3><span>6. </span>It is often difficult for you to relate to other people’s feelings.</h3>
-                    <select id="quest-6" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-6" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -121,8 +121,8 @@
             <div class="surveyWrapper">
                 <div class="quest-block col-6">
                     <h3><span>7. </span>In a discussion, truth should be more important than people’s sensitivities.</h3>
-                    <select id="quest-7" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-7" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -132,8 +132,8 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3><span>8. </span>You rarely get carried away by fantasies and ideas.</h3>
-                    <select id="quest-8" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-8" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -145,8 +145,8 @@
             <div class="surveyWrapper">
                 <div class="quest-block col-6">
                     <h3><span>9. </span>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
-                    <select id="quest-9" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-9" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -156,8 +156,8 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3><span>10. </span>You feel more energetic after spending time with a group of people.</h3>
-                    <select id="quest-10" required>
-                        <option value\ "disabled selected hidden">Your thoughts... agree / disagree?</option>
+                    <select id="quest-10" class="qValid" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
                         <option value="3">😐 | Neutral</option>
@@ -170,60 +170,90 @@
         <div id="btn-wrapper">
             <button class="submit-Btn" role="button">
                 <span>submit survey</span>
-                <div class="iconCHK">&#10004;</div>
-                <div class="btn-prompt">send it!</div>
+                <div class="success">&#10004;</div>
+                <!-- <div class="btn-rollover">send it!</div> -->
             </button>
         </div>
         <section class="foot">
-            <a href="/APIlist">API Friend List</a> |
+            <a href="/API/list">API Friend List</a> |
             <a href="https://github.com/rspica/FriendFinder/blob/master/README.md" target="_blank"> GitHub Repo</a>
         </section>
     </main>
     <script>
-    // basic back button to return to home page
-    $(document).on('click', '.back-btn', function() {
-        window.location = '/';
+    $(document).ready(function() {});
 
-    });
+    // form validation for type inputs and select option inputs
+    function formValidate() {
+        var isValid = true
+        $('.validate').each(function() {
+            if ($(this).val() === '' || $(this).val() === ' ') {
+                alert('Oops you left the ' + this.name + ' field blank');
+                isValid = false;
+            }
+        });
 
-    //inputValidate() {}
+        $('.qValid').each(function() {
+            if ($(this).val() === '') {
+                isValid = false;
+                alert('Hey you left question ' + this.value + ' field blank');
+            }
+        });
+        return isValid
+    };
 
-    // gets values from survey form field
+    // function to collect input values on form and survey
+    function inputValue(value) {
+        return $(value).val().trim();
+    }
+
+    function surveyReset(value) {
+        $(value).val('Select on a scale of 1 to 5');
+    }
+
+    //===============  Event handlers  ==================
+    //===================================================
+    // Event to get values from survey and form field
     $(document).on('click', '.submit-Btn', function(e) {
         e.preventDefault();
         e.stopPropagation();
 
-        var questions = [
-            $('#quest-1').val().trim(),
-            $('#quest-2').val().trim(),
-            $('#quest-3').val().trim(),
-            $('#quest-4').val().trim(),
-            $('#quest-5').val().trim(),
-            $('#quest-6').val().trim(),
-            $('#quest-7').val().trim(),
-            $('#quest-8').val().trim(),
-            $('#quest-9').val().trim(),
-            $('#quest-10').val().trim()
-        ]
+        const questions = [];
+        const quest = ['#quest-1', '#quest-2', '#quest-3', '#quest-4', '#quest-5', '#quest-6', '#quest-7',
+            '#quest-8', '#quest-9', '#quest-10'
+        ];
+
+        if (formValidate() === true) {
+            quest.forEach(function(elem, index) {
+                    const response = inputValue(elem);
+                    questions.push(response);
+                    surveyReset(elem);
+                });
+
+                const success = $('.success'); // ui action on submit button
+                success.addClass('iconCHK');
+                setTimeout(function() {
+                    success.removeClass('iconCHK')
+                }, 2500);
+            
 
         var newFriend = {
-            firstName: $('#firstName').val().trim(),
-            lastName: $('#lastName').val().trim(),
-            email: $('#email-input').val().trim(),
-            photo: $('#photo').val().trim(),
+            firstName: inputValue($('#firstName')),
+            lastName: inputValue($('#lastName')),
+            email: inputValue($('#email-input')),
+            photo: inputValue($('#photo')),
             scores: questions
         };
 
-        $('.iconCHK').css("top", "0");
+        console.log("new submission: ", newFriend);
 
-        console.log(newFriend);
-        //validate form enrtry
-        // if form entry === '' then alert user to enter valid entry
         $.post("data/friends", newFriend, function(data) {
             console.log(data)
         });
+    } else {
+        alert('Opps, go back and check your work; check question');
+    }
 
-        resetEverything();
+    //resetEverything();
     });
 
     function resetEverything() {
@@ -231,16 +261,16 @@
         $('#lastName').val('');
         $('#email-input').val('');
         $('#photo').val('');
-        $('#quest-1').val('');
-        $('#quest-2').val('');
-        $('#quest-3').val('');
-        $('#quest-4').val('');
-        $('#quest-5').val('');
-        $('#quest-6').val('');
-        $('#quest-7').val('');
-        $('#quest-8').val('');
-        $('#quest-9').val('');
-        $('#quest-10').val('');
+        // $('#quest-1').val('');
+        // $('#quest-2').val('');
+        // $('#quest-3').val('');
+        // $('#quest-4').val('');
+        // $('#quest-5').val('');
+        // $('#quest-6').val('');
+        // $('#quest-7').val('');
+        // $('#quest-8').val('');
+        // $('#quest-9').val('');
+        // $('#quest-10').val('');
     }
     </script>
 </body>
