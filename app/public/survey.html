@@ -180,50 +180,57 @@
         </section>
     </main>
     <script>
-    $(document).ready(function() {});
+    $(document).ready(function() {
 
-    // form validation for type inputs and select option inputs
-    function formValidate() {
-        var isValid = true
-        $('.validate').each(function() {
-            if ($(this).val() === '' || $(this).val() === ' ') {
-                alert('Oops you left the ' + this.name + ' field blank');
-                isValid = false;
-            }
-        });
+        // form validation for type inputs and select option inputs
+        function formValidate() {
+            var isValid = true
+            $('.validate').each(function() {
+                if ($(this).val() === '' || $(this).val() === ' ') {
+                    alert('Oops you left the ' + this.name + ' field blank');
+                    isValid = false;
+                }
+            });
 
-        $('.qValid').each(function() {
-            if ($(this).val() === '') {
-                isValid = false;
-                alert('Hey you left question ' + this.value + ' field blank');
-            }
-        });
-        return isValid
-    };
+            $('.qValid').each(function() {
+                if ($(this).val() === '') {
+                    isValid = false;
+                    alert('Hey you left question ' + this.value + ' field blank');
+                }
+            });
+            return isValid
+        };
 
-    // function to collect input values on form and survey
-    function inputValue(value) {
-        return $(value).val().trim();
-    }
+        // function to collect input values on form and survey
+        function inputValue(value) {
+            return $(value).val().trim();
+        }
+        // forn and servay resets after value capture
+        function surveyReset(value) {
+            $(value).val('');
+        }
 
-    function surveyReset(value) {
-        $(value).val('Select on a scale of 1 to 5');
-    }
+        function resetFormInput() {
+            $('#firstName').val('');
+            $('#lastName').val('');
+            $('#email-input').val('');
+            $('#photo').val('');
+        }
 
-    //===============  Event handlers  ==================
-    //===================================================
-    // Event to get values from survey and form field
-    $(document).on('click', '.submit-Btn', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
+        //===============  Event handlers  ==================
+        //===================================================
+        // Event to get values from survey and form field
+        $(document).on('click', '.submit-Btn', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-        const questions = [];
-        const quest = ['#quest-1', '#quest-2', '#quest-3', '#quest-4', '#quest-5', '#quest-6', '#quest-7',
-            '#quest-8', '#quest-9', '#quest-10'
-        ];
+            const questions = [];
+            const quest = ['#quest-1', '#quest-2', '#quest-3', '#quest-4', '#quest-5', '#quest-6', '#quest-7',
+                '#quest-8', '#quest-9', '#quest-10'
+            ];
 
-        if (formValidate() === true) {
-            quest.forEach(function(elem, index) {
+            if (formValidate() === true) {
+                quest.forEach(function(elem, index) {
                     const response = inputValue(elem);
                     questions.push(response);
                     surveyReset(elem);
@@ -234,44 +241,27 @@
                 setTimeout(function() {
                     success.removeClass('iconCHK')
                 }, 2500);
-            
 
-        var newFriend = {
-            firstName: inputValue($('#firstName')),
-            lastName: inputValue($('#lastName')),
-            email: inputValue($('#email-input')),
-            photo: inputValue($('#photo')),
-            scores: questions
-        };
 
-        console.log("new submission: ", newFriend);
+                var newFriend = {
+                    firstName: inputValue($('#firstName')),
+                    lastName: inputValue($('#lastName')),
+                    email: inputValue($('#email-input')),
+                    photo: inputValue($('#photo')),
+                    scores: questions
+                };
 
-        $.post("data/friends", newFriend, function(data) {
-            console.log(data)
+                console.log("new submission: ", newFriend);
+
+                $.post("data/friends", newFriend, function(data) {
+                    console.log(data)
+                });
+            } else {
+                alert('Opps, go back and check your work; check question');
+            }
+            //resetFormInput();
         });
-    } else {
-        alert('Opps, go back and check your work; check question');
-    }
-
-    //resetEverything();
     });
-
-    function resetEverything() {
-        $('#firstName').val('');
-        $('#lastName').val('');
-        $('#email-input').val('');
-        $('#photo').val('');
-        // $('#quest-1').val('');
-        // $('#quest-2').val('');
-        // $('#quest-3').val('');
-        // $('#quest-4').val('');
-        // $('#quest-5').val('');
-        // $('#quest-6').val('');
-        // $('#quest-7').val('');
-        // $('#quest-8').val('');
-        // $('#quest-9').val('');
-        // $('#quest-10').val('');
-    }
     </script>
 </body>
 
