@@ -36,7 +36,7 @@ Now access the FriendFinder app webpages from your browser url: `localhost:PORT`
 3. HTML
 4. CSS
 5. JavaScript
-6. Jquery
+6. jQuery
 
 * Express handles routing and the `server.js` file requires the following npm packages: 
 * express
