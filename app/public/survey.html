@@ -219,6 +219,15 @@
 
         //===============  Event handlers  ==================
         //===================================================
+        // Back button events for logo and back arrow
+
+        $(document).on('click', '.back-btn', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location = '/';
+        });
+
+
         // Event to get values from survey and form field
         $(document).on('click', '.submit-Btn', function(e) {
             e.preventDefault();
@@ -229,19 +238,12 @@
                 '#quest-8', '#quest-9', '#quest-10'
             ];
 
-            if (formValidate() === true) {
-                quest.forEach(function(elem, index) {
+            if (formValidate() === true) { 
+                quest.forEach(function(elem, index) { // loop through and pull off each of the survery question user selects
                     const response = inputValue(elem);
                     questions.push(response);
                     surveyReset(elem);
                 });
-
-                const success = $('.success'); // ui action on submit button
-                success.addClass('iconCHK');
-                setTimeout(function() {
-                    success.removeClass('iconCHK')
-                }, 2500);
-
 
                 var newFriend = {
                     firstName: inputValue($('#firstName')),
@@ -256,10 +258,17 @@
                 $.post("data/friends", newFriend, function(data) {
                     console.log(data)
                 });
+
+                const success = $('.success'); // ui action on submit button
+                success.addClass('iconCHK');
+                setTimeout(function() {
+                    success.removeClass('iconCHK')
+                }, 2500);
+
             } else {
                 alert('Opps, go back and check your work; check question');
             }
-            //resetFormInput();
+            resetFormInput();
         });
     });
     </script>

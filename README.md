@@ -3,6 +3,27 @@
 
 The app administers a 10 question survey. The app will take in results from a user and compare the answers from the current user's survey with those from other users that have been posted. The app will then display the name and picture of the user with the best overall match. This app use Express to handle routing and deployed to Heroku so other users can help populate the database.
 
+Installation
+
+To install the FriendFinder application locally follow the instructions below:
+
+With the command line:
+
+* 1 `git clone https://github.com/rspica/FriendFinder.git`
+* 2 `cd FriendFinder`
+* 3 `npm install`
+* 4 Run the FriendFinder server via the comand line locally: `node server.js`
+
+The FriendFinder app will now be running locally, note the command line log `listening on port 3000`
+
+Now access the FriendFinder app webpages from your browser url: `localhost:PORT`, the default port is set to 3000 specified by the user in the comand line is 3000. The URL would look like this: localhost:3000.
+
+The landing page:
+
+<img width="815" alt="screen shot 2017-07-06 at 3 08 37 am" src="https://user-images.githubusercontent.com/3219942/27899545-a0d7aecc-61f8-11e7-9dfd-922f6be314ea.png">
+
+
+
 ## Technical details
 
 #### This project utilizes the following:
