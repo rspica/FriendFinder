@@ -1,10 +1,18 @@
-/* Friend Finder forms page styles */
+/* Friend Finder form page styles */
 
-.container {
-    margin: 30px auto;
+body {
+    position: relative;
+}
+#surveyWrapper {
     max-width: 800px;
     width: 100%;
-
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    transform: translatex(50%);
+    -webkit-transition: all .45s cubic-bezier(.51,-0.31,.65,.63);
+    -moz-transition: all .45s cubic-bezier(.51,-0.31,.65,.63);
+    transition: all .45s cubic-bezier(.51,-0.31,.65,.63);
 }
 
 .head {
@@ -13,7 +21,7 @@
 
 
 /*-- grid controls for survey page-flexBox --*/
-.rowWrapper, .surveyWrapper {
+.rowWrapper, .surveyRow, .matchModal {
     display: flex;
     justify-content: space-between;
 }
@@ -119,10 +127,11 @@ input:focus {
 
 /* --question block on survey --*/
 
-h3 span {
-    color: #808080;
+h3 span, .modalHead { /* --styles for numbers in select form question  --*/
+ color: #808080;
  font-weight: 500;
  font-size: 2em;
+ line-height: .7;
 }
 
 select {
@@ -192,6 +201,52 @@ select:focus {
     top: 0;
 }
 
+/* macth modal window style*/
+
+.matchModal{
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 9;
+    background-color: tomato;
+}
+
+.matchIcon {
+    height: 75px;
+}
+
+.modalHead { 
+    color: #eee;
+    font-weight: 500;
+    font-size: 1.7em;
+    line-height: .9;
+}
+
+/* Modal close button (x) upper right corner*/
+.xClose {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+}
+
+.xClose:hover,
+.xClose:focus {
+    color: rgb(229, 47, 49);
+    cursor: pointer;
+    animation: spin .5s;
+}
+
+.match {
+    top: 0;
+}
+
 /*.btn-rollover{
     
 }
@@ -207,7 +262,7 @@ select:focus {
 }
 
 @media screen and (max-width: 840px) {
-     .container {
+     #surveyWrapper {
         max-width: 90%;
     }
 }
@@ -217,4 +272,30 @@ select:focus {
     .rowWrapper, .surveyWrapper {
         display: block;
     }
+}
+
+
+
+
+/*--  modal close animtaion  --*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }

@@ -16,7 +16,17 @@
 </head>
 
 <body>
-    <main class="container">
+    <!-- friend match modal -->
+    <section>
+        <div class="matchModal">
+         <div id="giveModal"><span class="xClose">&times;</span></div>
+        <img class="matchIcon" src="images/FF-logo1.svg" alt="friend match icon">
+            <h1 class="modalHead">Meet your match and start a conversation</h1>
+
+        </div>
+    </section>
+    <!--  survey form page -->
+    <main id="surveyWrapper">
         <button class="backArrow back-btn">&#10140;</button>
         <div class=head>
             <img class="back-btn" src="images/FF-logo2.svg" alt="Friend finder logo" style="width: 100px">
@@ -24,11 +34,11 @@
         <form class="inputWrapper">
             <section class="rowWrapper">
                 <div class="form-row col-6">
-                    <input id="firstName" class="validate" type="text" name="firstName" class="form" placeholder="First Name" required>
+                    <input id="firstName" class="validate" type="text" name="first name" class="form" placeholder="First Name" required>
                     <label for="firstNmae">first name</label>
                 </div>
                 <div class="form-row col-6">
-                    <input id="lastName" class="validate" type="text" name="lastName" class="form" placeholder="Last Name" required>
+                    <input id="lastName" class="validate" type="text" name="last name" class="form" placeholder="Last Name" required>
                     <label for="lastName">last name</label>
                 </div>
             </section>
@@ -40,16 +50,16 @@
             </section>
             <section class="rowWrapper">
                 <div class="form-row col-12">
-                    <input id="photo" class="validate" type="text" name="photoLink" placeholder="Enter link to your photo" required>
+                    <input id="photo" class="validate" type="text" name="link to photo" placeholder="Enter link to your photo" required>
                     <label for="photo">link to photo</label>
                 </div>
             </section>
         </form>
         <form>
-            <div class="surveyWrapper">
+            <div class="surveyRow">
                 <div class="quest-block col-6">
-                    <h3 class="question"><span class="NumDropCap">1. </span>Your mind is always buzzing with unexplored ideas and plans.</h3>
-                    <select id="quest-1" class="qValid" required>
+                    <h3 class="question"><span >1. </span>Your mind is always buzzing with unexplored ideas and plans.</h3>
+                    <select id="quest-1" class="qValid" name="1" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -59,32 +69,8 @@
                     </select>
                 </div>
                 <div class="quest-block col-6">
-                    <h3 class="question"><span class="NumDropCap">2. </span>Generally speaking, you rely more on your experience than your imagination.</h3>
-                    <select id="quest-2" class="qValid" required>
-                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
-                        <option value="5">😁 | Strongly agree</option>
-                        <option value="4">😌 | Agree</option>
-                        <option value="3">😐 | Neutral</option>
-                        <option value="2">😕 | Slightly disagree</option>
-                        <option value="1">😖 | Strongly disagree</option>
-                    </select>
-                </div>
-            </div>
-            <div class="surveyWrapper">
-                <div class="quest-block col-6">
-                    <h3 class="question"><span class="NumDropCap">3. </span>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
-                    <select id="quest-3" class="qValid" required>
-                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
-                        <option value="5">😁 | Strongly agree</option>
-                        <option value="4">😌 | Agree</option>
-                        <option value="3">😐 | Neutral</option>
-                        <option value="2">😕 | Slightly disagree</option>
-                        <option value="1">😖 | Strongly disagree</option>
-                    </select>
-                </div>
-                <div class="quest-block col-6">
-                    <h3 class="question"><span class="NumDropCap">4. </span>You rarely get carried away by fantasies and ideas.</h3>
-                    <select id="quest-4" class="qValid" required>
+                    <h3 class="question"><span>2. </span>Generally speaking, you rely more on your experience than your imagination.</h3>
+                    <select id="quest-2" class="qValid" name="2" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -94,10 +80,34 @@
                     </select>
                 </div>
             </div>
-            <div class="surveyWrapper">
+            <div class="surveyRow">
+                <div class="quest-block col-6">
+                    <h3 class="question"><span>3. </span>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+                    <select id="quest-3" class="qValid" name="3" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+                <div class="quest-block col-6">
+                    <h3 class="question"><span>4. </span>You rarely get carried away by fantasies and ideas.</h3>
+                    <select id="quest-4" class="qValid" name="4" required>
+                        <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
+                        <option value="5">😁 | Strongly agree</option>
+                        <option value="4">😌 | Agree</option>
+                        <option value="3">😐 | Neutral</option>
+                        <option value="2">😕 | Slightly disagree</option>
+                        <option value="1">😖 | Strongly disagree</option>
+                    </select>
+                </div>
+            </div>
+            <div class="surveyRow">
                 <div class="quest-block col-6">
                     <h3><span>5. </span>You rarely get carried away by fantasies and ideas.</h3>
-                    <select id="quest-5" class="qValid" required>
+                    <select id="quest-5" class="qValid" name="5" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -108,7 +118,7 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3><span>6. </span>It is often difficult for you to relate to other people’s feelings.</h3>
-                    <select id="quest-6" class="qValid" required>
+                    <select id="quest-6" class="qValid" name="6" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -118,10 +128,10 @@
                     </select>
                 </div>
             </div>
-            <div class="surveyWrapper">
+            <div class="surveyRow">
                 <div class="quest-block col-6">
                     <h3><span>7. </span>In a discussion, truth should be more important than people’s sensitivities.</h3>
-                    <select id="quest-7" class="qValid" required>
+                    <select id="quest-7" class="qValid" name="7" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -132,7 +142,7 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3><span>8. </span>You rarely get carried away by fantasies and ideas.</h3>
-                    <select id="quest-8" class="qValid" required>
+                    <select id="quest-8" class="qValid" name="8" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -142,10 +152,10 @@
                     </select>
                 </div>
             </div>
-            <div class="surveyWrapper">
+            <div class="surveyRow">
                 <div class="quest-block col-6">
                     <h3><span>9. </span>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
-                    <select id="quest-9" class="qValid" required>
+                    <select id="quest-9" class="qValid" name="9" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -156,7 +166,7 @@
                 </div>
                 <div class="quest-block col-6">
                     <h3><span>10. </span>You feel more energetic after spending time with a group of people.</h3>
-                    <select id="quest-10" class="qValid" required>
+                    <select id="quest-10" class="qValid" name="10" required>
                         <option value="" disabled selected hidden>Select on a scale of 1 to 5</option>
                         <option value="5">😁 | Strongly agree</option>
                         <option value="4">😌 | Agree</option>
@@ -181,10 +191,12 @@
     </main>
     <script>
     $(document).ready(function() {
+        console.log('ready on survey')
 
         // form validation for type inputs and select option inputs
         function formValidate() {
-            var isValid = true
+            let isValid = true;
+            console.log('in form val')
             $('.validate').each(function() {
                 if ($(this).val() === '' || $(this).val() === ' ') {
                     alert('Oops you left the ' + this.name + ' field blank');
@@ -193,19 +205,19 @@
             });
 
             $('.qValid').each(function() {
-                if ($(this).val() === '') {
+                if ($(this).val() === null) {
+                    alert('Hey you forgot question ' + this.name + ' it\'s blank');
                     isValid = false;
-                    alert('Hey you left question ' + this.value + ' field blank');
-                }
+                } 
             });
-            return isValid
+            return isValid;
         };
 
         // function to collect input values on form and survey
         function inputValue(value) {
             return $(value).val().trim();
         }
-        // forn and servay resets after value capture
+        // forn and survey resets after value capture
         function surveyReset(value) {
             $(value).val('');
         }
@@ -220,11 +232,17 @@
         //===============  Event handlers  ==================
         //===================================================
         // Back button events for logo and back arrow
+        const wrapper = $("#surveyWrapper");
 
         $(document).on('click', '.back-btn', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            window.location = '/';
+            wrapper.css("right", "-50%");
+            console.log('yep clicked');
+            setTimeout(function(){
+                window.location='/';
+            }, 750);
+
         });
 
 
@@ -232,28 +250,30 @@
         $(document).on('click', '.submit-Btn', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            isValid = formValidate();
 
             const questions = [];
             const quest = ['#quest-1', '#quest-2', '#quest-3', '#quest-4', '#quest-5', '#quest-6', '#quest-7',
-                '#quest-8', '#quest-9', '#quest-10'
-            ];
+                '#quest-8', '#quest-9', '#quest-10'];
 
-            if (formValidate() === true) { 
-                quest.forEach(function(elem, index) { // loop through and pull off each of the survery question user selects
+            if (isValid) {    
+                quest.forEach(function(elem) { // loop through and pull off each of the survery question user selects
+                    console.log('elem off of each(): ',elem)
                     const response = inputValue(elem);
                     questions.push(response);
                     surveyReset(elem);
                 });
 
                 var newFriend = {
-                    firstName: inputValue($('#firstName')),
-                    lastName: inputValue($('#lastName')),
-                    email: inputValue($('#email-input')),
-                    photo: inputValue($('#photo')),
+                    firstName: inputValue('#firstName'),
+                    lastName: inputValue('#lastName'),
+                    email: inputValue('#email-input'),
+                    photo: inputValue('#photo'),
                     scores: questions
                 };
 
                 console.log("new submission: ", newFriend);
+                console.log('Question responses: ',questions)
 
                 $.post("data/friends", newFriend, function(data) {
                     console.log(data)
@@ -265,10 +285,13 @@
                     success.removeClass('iconCHK')
                 }, 2500);
 
-            } else {
-                alert('Opps, go back and check your work; check question');
+                const matchModal = $('.matchModal'); // ui action on modal drop-down
+                matchModal.addClass('.match');
+
+                // const xClose = $('.xClose');
+                // xClose.removeClass$('.match');
+                resetFormInput();
             }
-            resetFormInput();
         });
     });
     </script>

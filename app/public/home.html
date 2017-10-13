@@ -21,16 +21,14 @@
         <section class=head>
             <img src="images/FF-logo2.svg" alt="Friend finder logo" style="width: 200px">
             <h1 class="intro">FrendFndr...</h1>
-            <p>Like a radar detector that points you to someone just like you. Get connected to someone highly compatible, who shares similar tastes and values. Remeber, there's no "i" in frend. FrendFndr it's how you meet people.</p>
+            <p>Friend finder is like a bird dog pointing you to someone just like you. Get connected to someone highly compatible, who shares similar tastes and values. Remember, there's no "i" in frend. FrendFndr it's how you meet people.</p>
         </section>
         
-            <a href="/survey">
-                <button class="survey-Btn" role="button">
-                    <div class="flash"></div>
-                    <span>Take the survey</span>
-                    <div class="iconARRW">&#10140;</div>
-                </button>
-            </a>
+        <button class="survey-Btn" role="button">
+            <div class="flash"></div>
+            <span>Take the survey</span>
+            <div class="iconARRW">&#10140;</div>
+        </button>
 
         <section class="foot">
             <a href="/APIlist">API Friend List</a> |
@@ -41,12 +39,14 @@
     $(document).ready(function() {
         const container = $("#container");
 
-        $("#btn-wrapper").on("click", ".survey-Btn", function(e) {
+        $(document).on("click", ".survey-Btn", function(e) {
             e.preventDefault();
             e.stopPropagation();
             container.css("left", "-50%");
             console.log('yep clicked');
-            window.location='/survey';
+            setTimeout(function(){
+                window.location='/survey';
+            }, 500);
         });
     });
     </script>
