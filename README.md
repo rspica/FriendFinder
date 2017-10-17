@@ -86,11 +86,11 @@ Each of these objects follow the format below:
 
 ```json
 {
-  firstName: "Ahmed",
-  lastName: "H.",
-  email: "ahmed@example.com",
-  photo: "https://avatars3.githubusercontent.com/u/5855843?v=4&s=400",
-  scores:[
+  "firstName": "Ahmed",
+  "lastName": "H.",
+  "email": "ahmed@example.com",
+  "photo": "https://avatars3.githubusercontent.com/u/5855843?v=4&s=400",
+  "scores":[
     "5",
     "1",
     "4",
@@ -112,12 +112,12 @@ Each of these objects follow the format below:
 	* User's results is capture in a simple array of numbers (ex: scores: Array(10) [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
 	* Compare the difference between the user's scores against other users' scores, question by question. Add up the differences to calculate the `totalDifference`.
 		* Example: 
-			* User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
+			* User 1: [5, 1, 4, 4, 5, 1, 2, 5, 1, 1]
 			* User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
-			* Total Difference: 2 + 1 + 2 = 5
+			* Total Difference: 2 + 1 + 2 + 3 = 8
 
-	* The person with the closest match will be the one with the "least" amount of difference.
+	* The person with the closest match will be the one with the "least" amount of total difference.
 
-* Once the closest match has been determined, it will display the result back to the user in the form of a modal pop-up. 
+* Once the closest match has been determined, the match will display the result back to the user in the form of a modal pop-up. 
 
-* The result will display both the name and picture of the closest match. 
+* The result will display both the name, email, and picture of the closest match. 
