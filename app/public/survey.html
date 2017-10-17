@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +43,7 @@
             </section>
             <section class="rowWrapper">
                 <div class="form-row col-12">
-                    <input id="email-input" class="validate" type="email" name="email" placeholder="Enter valid email address" required></input>
+                    <input id="email" class="validate" type="email" name="email address" placeholder="Enter valid email address" required></input>
                     <label for="email">email address</label>
                 </div>
             </section>
@@ -185,7 +184,7 @@
             </button>
         </div>
         <section class="foot">
-            <a href="/API/list">API Friend List</a> |
+            <a href="api/friends">API Friend List</a> |
             <a href="https://github.com/rspica/FriendFinder/blob/master/README.md" target="_blank"> GitHub Repo</a>
         </section>
     </main>
@@ -196,7 +195,6 @@
         // form validation for type inputs and select option inputs
         function formValidate() {
             let isValid = true;
-            console.log('in form val')
             $('.validate').each(function() {
                 if ($(this).val() === '' || $(this).val() === ' ') {
                     alert('Oops you left the ' + this.name + ' field blank');
@@ -217,15 +215,15 @@
         function inputValue(value) {
             return $(value).val().trim();
         }
-        // forn and survey resets after value capture
+        // survey resets after values captured
         function surveyReset(value) {
             $(value).val('');
         }
-
+         // form resets after values captured
         function resetFormInput() {
             $('#firstName').val('');
             $('#lastName').val('');
-            $('#email-input').val('');
+            $('#email').val('');
             $('#photo').val('');
         }
 
@@ -238,9 +236,9 @@
             e.preventDefault();
             e.stopPropagation();
             wrapper.css("right", "-50%");
-            console.log('yep clicked');
+            console.log('back btn clicked');
             setTimeout(function(){
-                window.location='/';
+                window.location =  '/';
             }, 750);
 
         });
@@ -257,7 +255,7 @@
                 '#quest-8', '#quest-9', '#quest-10'];
 
             if (isValid) {    
-                quest.forEach(function(elem) { // loop through and pull off each of the survery question user selects
+                quest.forEach(function(elem) { // loop through and pull off each survery question user response and push into questions array
                     console.log('elem off of each(): ',elem)
                     const response = inputValue(elem);
                     questions.push(response);
@@ -267,7 +265,7 @@
                 var newFriend = {
                     firstName: inputValue('#firstName'),
                     lastName: inputValue('#lastName'),
-                    email: inputValue('#email-input'),
+                    email: inputValue('#email'),
                     photo: inputValue('#photo'),
                     scores: questions
                 };
@@ -275,8 +273,9 @@
                 console.log("new submission: ", newFriend);
                 console.log('Question responses: ',questions)
 
-                $.post("data/friends", newFriend, function(data) {
-                    console.log(data)
+                var currentURL = window.location.origin;
+                $.post(currentURL + "/api/friends", newFriend, function(data) {
+                    console.log("data for ajax post", data)
                 });
 
                 const success = $('.success'); // ui action on submit button

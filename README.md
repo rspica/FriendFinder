@@ -1,5 +1,5 @@
 # FriendFinder
-#### "FriendFinder" application -- basically a compatibility app.
+#### "FriendFinder" application -- a compatibility app.
 
 The app administers a 10 question survey. The app will take in results from a user and compare the answers from the current user's survey with those from other users that have been posted. The app will then display the name and picture of the user with the best overall match. This app use Express to handle routing and deployed to Heroku so other users can help populate the database.
 
@@ -16,13 +16,15 @@ With the command line:
 
 The FriendFinder app will now be running locally, note the command line log `listening on port 3000`
 
-Now access the FriendFinder app webpages from your browser url: `localhost:PORT`, the default port is set to 3000 specified by the user in the comand line is 3000. The URL would look like this: localhost:3000.
+Now access the FriendFinder app webpages from your browser url: `localhost:PORT`, the default port is set to 3000. The URL will look like this: `localhost:3000`. 
 
-##### The landing page:
+##### FriendFinder is a two page app
+
+#### The landing page:
 
 <img width="815" alt="Friend Finder home page" src="https://github.com/rspica/FriendFinder/blob/master/app/public/images/ff-landingPage.png">
 
-##### The survey page:
+#### The survey page:
 
 <img width="815" alt="Friend Finder home page" src="https://github.com/rspica/FriendFinder/blob/master/app/public/images/ff-surveyPage.png">
 
@@ -44,7 +46,7 @@ Now access the FriendFinder app webpages from your browser url: `localhost:PORT`
 * path
 
 
-//============================
+---
 directory organization for this repository matches the following:
 
   ```
@@ -84,20 +86,22 @@ Each of these objects follow the format below:
 
 ```json
 {
-  "name":"Ahmed",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  "scores":[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ]
+  firstName: "Ahmed",
+  lastName: "H.",
+  email: "ahmed@example.com",
+  photo: "https://avatars3.githubusercontent.com/u/5855843?v=4&s=400",
+  scores:[
+    "5",
+    "1",
+    "4",
+    "4",
+    "5",
+    "1",
+    "2",
+    "5",
+    "4",
+    "1"
+  ]
 }
 ```
 
@@ -105,8 +109,8 @@ Each of these objects follow the format below:
 
    		
 * Compatibility matching is determined based on the following.
-	* User's results is capture in a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
-	* Then will compare the difference between the user's scores against other users' scores, question by question. Then will add up the differences to calculate the `totalDifference`.
+	* User's results is capture in a simple array of numbers (ex: scores: Array(10) [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
+	* Compare the difference between the user's scores against other users' scores, question by question. Add up the differences to calculate the `totalDifference`.
 		* Example: 
 			* User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
 			* User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]

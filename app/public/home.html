@@ -31,7 +31,7 @@
         </button>
 
         <section class="foot">
-            <a href="/APIlist">API Friend List</a> |
+             <a href="api/friends">API Friend List</a> |
             <a href="https://github.com/rspica/FriendFinder/blob/master/README.md" target="_blank"> GitHub Repo</a>
         </section>
     </main>
@@ -40,10 +40,9 @@
         const container = $("#container");
 
         $(document).on("click", ".survey-Btn", function(e) {
-            e.preventDefault();
             e.stopPropagation();
             container.css("left", "-50%");
-            console.log('yep clicked');
+            console.log('survey btn clicked');
             setTimeout(function(){
                 window.location='/survey';
             }, 500);
