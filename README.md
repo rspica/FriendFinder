@@ -22,11 +22,11 @@ Now access the FriendFinder app webpages from your browser url: `localhost:PORT`
 
 #### The landing page:
 
-<img width="815" alt="Friend Finder home page" src="https://github.com/rspica/FriendFinder/blob/master/app/public/images/ff-landingPage.png">
+<img width="715" alt="Friend Finder home page" src="https://github.com/rspica/FriendFinder/blob/master/app/public/images/ff-landingPage.png">
 
 #### The survey page:
 
-<img width="815" alt="Friend Finder home page" src="https://github.com/rspica/FriendFinder/blob/master/app/public/images/ff-surveyPage.png">
+<img width="715" alt="Friend Finder home page" src="https://github.com/rspica/FriendFinder/blob/master/app/public/images/ff-surveyPage.png">
 
 
 
